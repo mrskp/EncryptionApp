@@ -1,10 +1,10 @@
-This C# application implements a flexible architecture using the IMode interface. It provides two distinct functionalities:
+# This C# application implements a flexible architecture using the IMode interface. It provides two distinct functionalities:
 
 **PrimeMode**: Counts the prime numbers between two specified values.
 **EncryptionMode**: Encrypts words from a file using a character mapping file and writes the results to another file.
 The application uses IMode as a standard interface, enabling extensibility for additional modes in the future.
 
-**Features**
+### Features
 PrimeMode:
 Counts the number of prime numbers in a specified range (exclusive of the start and end values).
 Validates inputs for correctness.
@@ -15,14 +15,14 @@ Reads a character mapping from a file to build an encryption map.
 Encrypts words from a file using the map and writes the results to a specified output file.
 Includes input validation for file existence and format compliance.
 
-**Installation**
+### Installation
 Prerequisites:
 .NET 6.0 SDK or higher.
 Setup:
 Clone or download the project files.
 Open the project in an IDE like Visual Studio or use the terminal.
 
-**Usage**
+### Usage
 PrimeMode:
 The program prompts for start and end values.
 Enter valid integers for both values.
@@ -34,7 +34,7 @@ Mapping File: A text file containing character mappings in the format <original>
 Words File: A text file containing words to encrypt, one word per line.
 Output File: Path for the encrypted words to be saved.
 
-**Example Inputs and Outputs**
+### Example Inputs and Outputs
 PrimeMode
 Input:
 Start: 1  
@@ -54,7 +54,7 @@ Output File Contents:
 hsk  
 ksh  
 
-**Error Handling**
+### Error Handling
 PrimeMode:
 Ensures start and end are valid integers.
 Throws exceptions for invalid or reversed ranges.
@@ -63,10 +63,10 @@ EncryptionMode:
 Validates the existence and format of the mapping and words files.
 Handles cases where mappings are incomplete or words contain unmapped characters.
 
-**Limitations**
+### Limitations
 PrimeMode does not support ranges where start >= end.
 EncryptionMode expects valid input files with correct formatting.
 
-**Extensions**
+### Extensions
 Add new modes by implementing the IMode interface.
 Extend encryption logic to support multi-character replacements or advanced encryption algorithms.
